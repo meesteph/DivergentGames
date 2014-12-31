@@ -37,7 +37,7 @@ Renderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 157398}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 255
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 157398}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b427d93c79648399fbdae6ccd49af0, type: 3}
+  m_Script: {fileID: 11500000, guid: de54d187b88fb214fbe2244c2ed4c26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   forceCoefficient: 30000
