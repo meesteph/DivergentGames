@@ -4,6 +4,9 @@ using System.Collections;
 public class WorldScript : MonoBehaviour {
 
 	private Vector3 screenBoundary;
+
+    public GameObject bounceNode;
+
 	public GameObject topBound;
 	public GameObject rightBound;
 	public GameObject leftBound;
@@ -21,7 +24,13 @@ public class WorldScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
+        if (Input.GetButtonDown("Fire1")) {
 
+            Vector3 p = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y,10.0f));
+             
+            Instantiate(bounceNode,new Vector3(p.x,p.y, 0.0f),Quaternion.identity);
+             
+         }
 
 	}
 }

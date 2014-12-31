@@ -5,6 +5,8 @@ public class BounceTriggerScript : MonoBehaviour {
 
 	public float forceCoefficient;
 
+    private int ticks = 0;
+
 	void OnTriggerEnter (Collider playerSphere)
 	{
 		Vector3 force = playerSphere.transform.position - transform.position;
@@ -13,4 +15,14 @@ public class BounceTriggerScript : MonoBehaviour {
 		playerSphere.rigidbody.AddForce (force);
 		Destroy (gameObject);
 	}
+
+    void Update() {
+
+        if(ticks < 3) {
+            ticks += 1;
+            return;
+        }
+
+        Destroy(gameObject);
+    }
 }

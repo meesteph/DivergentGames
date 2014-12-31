@@ -2028,6 +2028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d6dcaeafb94e460196727379f5f59e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bounceNode: {fileID: 157398, guid: 949ccf4a44e2544329f1076d3ebe3b9c, type: 2}
   topBound: {fileID: 1253747527}
   rightBound: {fileID: 777260164}
   leftBound: {fileID: 585606927}
