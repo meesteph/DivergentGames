@@ -14,9 +14,9 @@ public class ButtonManager : MonoBehaviour {
     public void SendLogin()
     {
         InputField[] loginData = GameObject.Find("LoginCanvas").GetComponentsInChildren<InputField>();
-        string username = loginData[0].value;
-        string password = loginData[1].value;
+        //string username = loginData[0].value;
+        //string password = loginData[1].value;
 
-        MClient.Sendpacket(0, username + "~" + password);
+        //MClient.SendPacket(0, username + "~" + password);
     }
 }

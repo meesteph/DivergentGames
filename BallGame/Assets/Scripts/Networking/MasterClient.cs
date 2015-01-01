@@ -79,7 +79,7 @@ public class MasterClient : MonoBehaviour
         }
     }
 
-    public void SendPacket(byte PacketID, string data)
+    public void SendPacket(byte packetID, string data)
     {
         string[] packetData = data.Split('~');
         switch(packetID)
