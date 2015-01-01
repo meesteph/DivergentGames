@@ -24,10 +24,10 @@ public class WorldScript : MonoBehaviour {
         Instantiate(player,new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
 
         // Move boundaries based on screen size
-		rightBound.transform.position = new Vector3 ((Screen.width + 5)/2+2, 0.0f, 0.0f);
-		leftBound.transform.position = new Vector3 (-(Screen.width + 5)/2-2, 0.0f, 0.0f);
-		topBound.transform.position = new Vector3 (0.0f, (Screen.height + 5)/2 + 100, 0.0f);
-		lowerBound.transform.position = new Vector3 (0.0f, -(Screen.height + 5)/2-2, 0.0f);
+		rightBound.transform.position = new Vector3 ((Screen.width + 100)/2+2, 0.0f, 0.0f);
+		leftBound.transform.position = new Vector3 (-(Screen.width + 100)/2-2, 0.0f, 0.0f);
+		topBound.transform.position = new Vector3 (0.0f, (Screen.height + 100)/2 + 100, 0.0f);
+		lowerBound.transform.position = new Vector3 (0.0f, -(Screen.height + 100)/2-2, 0.0f);
 
         // Adjust camera size based on screen size
 		Camera.main.orthographicSize = 0.5f * Screen.height;
