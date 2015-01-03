@@ -50,13 +50,12 @@
      <Compile Include="Assets\Scripts\Bounce Scripts\BounceTriggerScript.cs" />
      <Compile Include="Assets\Scripts\Bounce Scripts\BoundaryRLBounceScript.cs" />
      <Compile Include="Assets\Scripts\Bounce Scripts\BoundaryTBounceScript.cs" />
-     <Compile Include="Assets\Scripts\Networking\DataInputStream.cs" />
-     <Compile Include="Assets\Scripts\Networking\DataOutputStream.cs" />
-     <Compile Include="Assets\Scripts\Networking\MasterClient.cs" />
-     <Compile Include="Assets\Scripts\Networking\PacketDecoder.cs" />
-     <Compile Include="Assets\Scripts\Networking\PacketEncoder.cs" />
      <Compile Include="Assets\Scripts\PlayerScript.cs" />
-     <Compile Include="Assets\Scripts\UI\ButtonManager.cs" />
+     <Compile Include="Assets\Scripts\UI\CancelButtonManager.cs" />
+     <Compile Include="Assets\Scripts\UI\LoginButtonManager.cs" />
+     <Compile Include="Assets\Scripts\UI\LogoutButtonManager.cs" />
+     <Compile Include="Assets\Scripts\UI\RegisterButtonManager.cs" />
+     <Compile Include="Assets\Scripts\UI\RegistrationButtonManager.cs" />
      <Compile Include="Assets\Scripts\WorldScript.cs" />
      <Compile Include="Assets\Scripts\playerDie.cs" />
      <Compile Include="Assets\Scripts\textScript.cs" />
@@ -65,6 +64,7 @@
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Miscellaneous Shaders\Mobile Background.shader" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Vertex Colored Shaders\Mobile Transparent Vertex Color.shader" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Miscellaneous Shaders\Mobile Detail.shader" />
+     <None Include="Assets\plugins\Parse.Unity.xml" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap Reflective.shader" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Particles Additive Culled.shader" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Vertex Colored Shaders\Mobile Vertex Colored.shader" />
@@ -73,6 +73,9 @@
      <None Include="Assets\Gem Shader\diamond shader.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Parse.Unity">
+ <HintPath>C:/Users/lulz/Documents/GitHub/DivergentGames/BallGame/Assets/plugins/Parse.Unity.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
