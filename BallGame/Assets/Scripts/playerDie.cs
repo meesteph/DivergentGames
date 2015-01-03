@@ -15,6 +15,7 @@ public class playerDie : MonoBehaviour {
 
             // TODO add count down timer for player before respawn
             // Spawn new player sphere
+            Destroy(playerSphereCollider);
             Instantiate(player,new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
             return;
 
