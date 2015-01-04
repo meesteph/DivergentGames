@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\UI\CancelButtonManager.cs" />
      <Compile Include="Assets\Scripts\UI\LoginButtonManager.cs" />
      <Compile Include="Assets\Scripts\UI\LogoutButtonManager.cs" />
+     <Compile Include="Assets\Scripts\UI\PlayButtonManager.cs" />
      <Compile Include="Assets\Scripts\UI\RegisterButtonManager.cs" />
      <Compile Include="Assets\Scripts\UI\RegistrationButtonManager.cs" />
      <Compile Include="Assets\Scripts\WorldScript.cs" />

@@ -10,6 +10,8 @@ public class playerDie : MonoBehaviour {
 	void OnTriggerEnter (Collider playerSphereCollider){
 		Destroy(playerSphereCollider);
 		PauseGame();
+		// Upload time to database
+		timeTracker.
 	}
 	
 	public void PauseGame()
@@ -17,6 +19,10 @@ public class playerDie : MonoBehaviour {
 		// Pause game
 		Time.timeScale = 0;
 		gamePaused = true;
+		
+		// Upload time to database
+		
+		// 
 		
 		// Instantiate menu scene
 		Application.LoadLevel ("SettingsScene");
