@@ -18,6 +18,7 @@ public class timeTracker : MonoBehaviour {
 		{
 			Text gameTime = GetComponent<Text> ();
 			timer += Time.deltaTime / Time.timeScale;
+			timer = Mathf.Round(timer * 1000f) / 1000f;
 			gameTime.text = "Timer: " + timer.ToString ();
 		}
 	}	
