@@ -2,6 +2,7 @@
 ###################
 *.com
 *.class
+*.dll
 *.exe
 *.o
 *.so
@@ -38,3 +39,11 @@ Thumbs.db
 
 
 *.meta
+BallGame/Library*
+*.sln
+BallGame/Library/guidmapper
+BallGame/BallGame.userprefs
+BallGame/BallGame-csharp.sln
+BallGame/Library/metadata/49/49891f947711b47b6b2283f75d169ae4
+BallGame/Library/ScriptAssemblies/Assembly-CSharp.dll
+BallGame/Library/metadata/49/49891f947711b47b6b2283f75d169ae4
