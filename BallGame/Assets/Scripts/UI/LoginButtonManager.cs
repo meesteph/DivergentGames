@@ -21,7 +21,7 @@ public class LoginButtonManager : MonoBehaviour {
         if (ParseUser.CurrentUser != null)
         {
             errorText = "Loading game...";
-            Application.LoadLevel ("MainScene");
+            Application.LoadLevel ("SettingsScene");
         }   
         else
         {
