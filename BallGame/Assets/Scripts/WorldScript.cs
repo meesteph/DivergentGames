@@ -5,7 +5,7 @@ public class WorldScript : MonoBehaviour {
 
 	private Vector3 screenBoundary;
 
-    public GameObject bounceNode;
+    //public GameObject bounceNode;
     public GameObject player;
 	public GameObject topBound;
 	public GameObject rightBound;
@@ -38,10 +38,10 @@ public class WorldScript : MonoBehaviour {
 	void Update () {
 
         // Spawn bounce nodes where mouse clicks occur
-        if (Input.GetButtonDown("Fire1")) {
-            Vector3 p = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y,10.0f));
-            Instantiate(bounceNode,new Vector3(p.x,p.y, 0.0f),Quaternion.identity);
-         }
+        //if (Input.GetButtonDown("Fire1")) {
+        //    Vector3 p = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y,10.0f));
+        //    Instantiate(bounceNode,new Vector3(p.x,p.y, 0.0f),Quaternion.identity);
+        // }
 
 	}
 }

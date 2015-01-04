@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\Bounce Scripts\BoundaryRLBounceScript.cs" />
      <Compile Include="Assets\Scripts\Bounce Scripts\BoundaryTBounceScript.cs" />
      <Compile Include="Assets\Scripts\PlayerScript.cs" />
+     <Compile Include="Assets\Scripts\RecognizeMouseClick.cs" />
      <Compile Include="Assets\Scripts\UI\CancelButtonManager.cs" />
      <Compile Include="Assets\Scripts\UI\LoginButtonManager.cs" />
      <Compile Include="Assets\Scripts\UI\LogoutButtonManager.cs" />

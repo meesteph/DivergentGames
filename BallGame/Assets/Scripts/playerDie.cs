@@ -7,20 +7,15 @@ public class playerDie : MonoBehaviour {
     public GameObject player;
 
 	void OnTriggerEnter (Collider playerSphereCollider){
-
-		if(WorldScript.playerLives > 0) {
-
-            // Decrement lives
-            WorldScript.playerLives -= 1;
-
-            // TODO add count down timer for player before respawn
-            // Spawn new player sphere
-            Destroy(playerSphereCollider);
-            Instantiate(player,new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
-            return;
-
-        } else {
-            // TODO Create 'new game' menu (also shows latest score and top scores)
-        }
+		Destroy(playerSphereCollider);
+		PauseGame();
+	}
+	
+	public void PauseGame()
+	{
+		// Pause game
+		Time.timeScale = 0;
+		
+		// Instantiate pause GUI (highscores, 
 	}
 }
