@@ -9,7 +9,7 @@ public class timeTracker : MonoBehaviour {
 
 	void Start(){
 
-		Time.timeScale = 4.0f;
+		Time.timeScale = 1.0f;
 	}
 
 	// Update is called once per frame
