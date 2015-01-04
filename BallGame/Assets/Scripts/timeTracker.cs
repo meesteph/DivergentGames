@@ -9,7 +9,7 @@ public class timeTracker : MonoBehaviour {
 
 	void Start(){
 
-		Time.timeScale = 4.0f;
+		Time.timeScale = 1.0f;
 	}
 
 	// Update is called once per frame
@@ -20,6 +20,10 @@ public class timeTracker : MonoBehaviour {
 			timer += Time.deltaTime / Time.timeScale;
 			timer = Mathf.Round(timer * 1000f) / 1000f;
 			gameTime.text = "Timer: " + timer.ToString ();
+
+
 		}
+
+
 	}	
 }

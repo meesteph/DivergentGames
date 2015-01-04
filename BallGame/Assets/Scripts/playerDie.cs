@@ -11,7 +11,7 @@ public class playerDie : MonoBehaviour {
 		Destroy(playerSphereCollider);
 		PauseGame();
 		// Upload time to database
-		timeTracker.timer = 0;
+		timeTracker.timer = 0.0f;
 	}
 	
 	public void PauseGame()
