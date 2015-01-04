@@ -13,6 +13,7 @@ public class LoginButtonManager : MonoBehaviour {
     void Start() 
     {
         displayError = GameObject.Find("txtLoginMessage").GetComponent<Text>();
+        Time.timeScale = 1;
     }
 
     void Update()
