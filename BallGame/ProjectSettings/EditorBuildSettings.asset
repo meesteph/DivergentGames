@@ -11,3 +11,5 @@ EditorBuildSettings:
     path: Assets/LoginScene.unity
   - enabled: 1
     path: Assets/RegisterScene.unity
+  - enabled: 1
+    path: Assets/SettingsScene.unity

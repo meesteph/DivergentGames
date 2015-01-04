@@ -2,6 +2,7 @@
 ###################
 *.com
 *.class
+*.dll
 *.exe
 *.o
 *.so
@@ -38,3 +39,5 @@ Thumbs.db
 
 
 *.meta
+BallGame/Library*
+*.sln

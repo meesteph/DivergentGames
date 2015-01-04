@@ -3,6 +3,7 @@ using System.Collections;
 
 public class playerDie : MonoBehaviour {
 
+	public static bool gamePaused = false;
 	private int lives;
     public GameObject player;
 
@@ -15,7 +16,9 @@ public class playerDie : MonoBehaviour {
 	{
 		// Pause game
 		Time.timeScale = 0;
+		gamePaused = true;
 		
-		// Instantiate pause GUI (highscores, 
+		// Instantiate menu scene
+		Application.LoadLevel ("SettingsScene");
 	}
 }
