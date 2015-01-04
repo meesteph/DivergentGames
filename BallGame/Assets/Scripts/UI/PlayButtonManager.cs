@@ -3,8 +3,8 @@ using System.Collections;
 
 public class PlayButtonManager : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+	public void playGame()
+	{
 		Application.LoadLevel ("MainScene");
 	}
 
