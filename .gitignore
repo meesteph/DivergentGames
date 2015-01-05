@@ -30,10 +30,4 @@ obj/
 ehthumbs.db
 Thumbs.db
 
-*.sln
-*.userprefs
-BallGame/Library/assetDatabase3
-BallGame/Library/guidmapper
-*.sln
-*.userprefs
 *.mdb
