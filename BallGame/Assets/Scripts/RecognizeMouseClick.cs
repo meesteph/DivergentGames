@@ -11,6 +11,7 @@ public class RecognizeMouseClick : MonoBehaviour {
 		force = force / force.magnitude;
 		force = force * TapForceCoefficient;
 		rigidbody.AddForce (force.x, force.y, 0.0f);
+		rigidbody.angularVelocity = force;
 
 	}
 

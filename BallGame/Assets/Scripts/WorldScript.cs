@@ -26,7 +26,7 @@ public class WorldScript : MonoBehaviour {
         // Move boundaries based on screen size
 		rightBound.transform.position = new Vector3 ((Screen.width + 100)/2+2, 0.0f, 0.0f);
 		leftBound.transform.position = new Vector3 (-(Screen.width + 100)/2-2, 0.0f, 0.0f);
-		topBound.transform.position = new Vector3 (0.0f, (Screen.height + 100)/2 + 100, 0.0f);
+		topBound.transform.position = new Vector3 (0.0f, (Screen.height + 100)/2 + 200, 0.0f);
 		lowerBound.transform.position = new Vector3 (0.0f, -(Screen.height + 100)/2-2, 0.0f);
 
         // Adjust camera size based on screen size
