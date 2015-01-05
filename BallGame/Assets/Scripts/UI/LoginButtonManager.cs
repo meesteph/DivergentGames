@@ -9,6 +9,9 @@ public class LoginButtonManager : MonoBehaviour {
 	//private MasterClient MClient;
     Text displayError;
     private string errorText = string.Empty;
+    public static float highA;
+    public static float highB;
+    public static float highC;
 
     void Start() 
     {

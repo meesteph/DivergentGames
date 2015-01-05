@@ -4,13 +4,14 @@ using System.Collections;
 public class playerDie : MonoBehaviour {
 
 	public static bool gamePaused = false;
-	private int lives;
     public GameObject player;
+    private float time;
 
 	void OnTriggerEnter (Collider playerSphereCollider){
 		Destroy(playerSphereCollider);
 		PauseGame();
-		// Upload time to database
+		time = timeTracker.timer;
+		SubmitHighscores();
 		timeTracker.timer = 0.0f;
 	}
 	
@@ -22,5 +23,10 @@ public class playerDie : MonoBehaviour {
 		
 		// Instantiate menu scene
 		Application.LoadLevel ("SettingsScene");
+	}
+	
+	public void SubmitHighscores()
+	{
+		
 	}
 }
