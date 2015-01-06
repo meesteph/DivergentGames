@@ -12,7 +12,7 @@ GameObject:
   - 135: {fileID: 13523052}
   - 23: {fileID: 2323052}
   - 54: {fileID: 5423052}
-  - 114: {fileID: 11423052}
+  - 114: {fileID: 11494094}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -74,7 +74,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: c2bc5d37bd115a7011005aba44295342, type: 2}
+  - {fileID: 2100000, guid: 5317f3e76581f4165b16ede5caa5f14b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -97,14 +97,14 @@ Rigidbody:
   m_GameObject: {fileID: 123050}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
+  m_Drag: .25
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &11423052
+--- !u!114 &11494094
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -112,10 +112,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 123050}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8569a03841a624c1cb8b5ccf855f26a3, type: 3}
+  m_Script: {fileID: 11500000, guid: fd20c19734444bd44b20c56426d9ccc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  TapForceCoefficient: 50000
 --- !u!135 &13523052
 SphereCollider:
   m_ObjectHideFlags: 1

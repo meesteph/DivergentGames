@@ -13,6 +13,7 @@ public class LoginButtonManager : MonoBehaviour {
     void Start() 
     {
         displayError = GameObject.Find("txtLoginMessage").GetComponent<Text>();
+        Time.timeScale = 1;
     }
 
     void Update()
@@ -21,7 +22,7 @@ public class LoginButtonManager : MonoBehaviour {
         if (ParseUser.CurrentUser != null)
         {
             errorText = "Loading game...";
-            Application.LoadLevel ("MainScene");
+            Application.LoadLevel ("SettingsScene");
         }   
         else
         {

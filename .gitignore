@@ -1,33 +1,27 @@
-# Compiled source #
-###################
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
- 
-# Packages #
-############
-# it's better to unpack these files and commit the raw source
-# git has its own built in compression methods
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
- 
-# Logs and databases #
-######################
-*.log
-*.sql
-*.sqlite
- 
-# OS generated files #
-######################
+# =============== #
+# Unity generated #
+# =============== #
+Temp/
+Library/
+
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+ExportedObj/
+obj/
+*.svd
+*.userprefs
+/*.csproj
+*.pidb
+*.suo
+/*.sln
+*.user
+*.unityproj
+*.booproj
+
+# ============ #
+# OS generated #
+# ============ #
 .DS_Store
 .DS_Store?
 ._*
@@ -36,6 +30,7 @@
 ehthumbs.db
 Thumbs.db
 
-
-
-*.meta
+*.sln
+*.userprefs
+BallGame/Library/assetDatabase3
+BallGame/Library/guidmapper

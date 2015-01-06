@@ -26,7 +26,7 @@ public class RegistrationButtonManager : MonoBehaviour {
         displayError.text = errorText;
         if (ParseUser.CurrentUser != null)
         {
-            Application.LoadLevel ("MainScene");
+            Application.LoadLevel ("SettingsScene");
         }
         else
         {
