@@ -18,6 +18,7 @@ obj/
 *.user
 *.unityproj
 *.booproj
+*.sln
 
 # ============ #
 # OS generated #
@@ -30,7 +31,10 @@ obj/
 ehthumbs.db
 Thumbs.db
 
+*.mdb
 *.sln
-*.userprefs
 BallGame/Library/assetDatabase3
-BallGame/Library/guidmapper
+BallGame/Library/assetDatabase3
+BallGame/Library/CurrentMaximizeLayout.dwlt
+*.dwlt
+*.dwlt
