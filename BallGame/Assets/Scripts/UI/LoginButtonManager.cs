@@ -12,9 +12,12 @@ public class LoginButtonManager : MonoBehaviour {
     public static float highA;
     public static float highB;
     public static float highC;
+    public static string username;
+    private InputField[] loginData;
 
     void Start() 
     {
+        loginData = GameObject.Find("LoginPanel").GetComponentsInChildren<InputField>();
         displayError = GameObject.Find("txtLoginMessage").GetComponent<Text>();
         Time.timeScale = 1;
     }
@@ -36,8 +39,7 @@ public class LoginButtonManager : MonoBehaviour {
     public void SendLogin()
     {
         errorText = "Logging in...";
-        InputField[] loginData = GameObject.Find("LoginPanel").GetComponentsInChildren<InputField>();
-        string username = loginData[0].text;
+        username = loginData[0].text;
         string password = loginData[1].text;
 
         ParseUser.LogInAsync(username, password).ContinueWith(t =>

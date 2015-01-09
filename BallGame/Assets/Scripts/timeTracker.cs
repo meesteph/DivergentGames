@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class timeTracker : MonoBehaviour {
 
 	public static float timer = 0.0f;
+	public static float timeScale = 1;
 
 	void Start(){
 
@@ -20,8 +21,6 @@ public class timeTracker : MonoBehaviour {
 			timer += Time.deltaTime / Time.timeScale;
 			timer = Mathf.Round(timer * 1000f) / 1000f;
 			gameTime.text = "Timer: " + timer.ToString ();
-
-
 		}
 
 

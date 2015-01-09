@@ -6,8 +6,17 @@ using System;
 
 public class RegisterButtonManager : MonoBehaviour {
 
+    private InputField[] loginData;
+    public static string username = string.Empty;
+
+    void Start()
+    {
+        loginData = GameObject.Find("LoginPanel").GetComponentsInChildren<InputField>();
+    }
+
     public void RegisterButtonClicked()
     {
-         Application.LoadLevel ("RegisterScene");
+        username = loginData[0].text;
+        Application.LoadLevel ("RegisterScene");
     }
 }

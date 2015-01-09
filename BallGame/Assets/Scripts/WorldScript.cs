@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Parse;
 
 public class WorldScript : MonoBehaviour {
-
-	private Vector3 screenBoundary;
 
     //public GameObject bounceNode;
     public GameObject player;
@@ -14,34 +13,56 @@ public class WorldScript : MonoBehaviour {
 
     public static int playerLives;
     public int startLives;
+    private DeviceOrientation pastOrientation;
+    private Vector3 screenBoundary;
 
 	void Start () {
-
+        
         // Instantiate playerLives
         playerLives = startLives;
 
         // Spawn player
         Instantiate(player,new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
 
-        // Move boundaries based on screen size
-		rightBound.transform.position = new Vector3 ((Screen.width + 100)/2+2, 0.0f, 0.0f);
-		leftBound.transform.position = new Vector3 (-(Screen.width + 100)/2-2, 0.0f, 0.0f);
-		topBound.transform.position = new Vector3 (0.0f, (Screen.height + 100)/2 + 200, 0.0f);
-		lowerBound.transform.position = new Vector3 (0.0f, -(Screen.height + 100)/2-2, 0.0f);
-
-        // Adjust camera size based on screen size
-		Camera.main.orthographicSize = 0.5f * Screen.height;
+        moveBounds();
 
 	}
 
 	// Update is called once per frame
 	void Update () {
 
-        // Spawn bounce nodes where mouse clicks occur
-        //if (Input.GetButtonDown("Fire1")) {
-        //    Vector3 p = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y,10.0f));
-        //    Instantiate(bounceNode,new Vector3(p.x,p.y, 0.0f),Quaternion.identity);
-        // }
+        // Are we logged in?
+       if (ParseUser.CurrentUser != null)
+        {
+            // do stuff with the user
+        }
+        else
+        {
+            Application.LoadLevel ("LoginScene");
+        }
+
+        // Do this if the phone's orientation has changed since last frame
+        if(pastOrientation != Input.deviceOrientation)
+        {
+            Time.timeScale = 0; // Pause timer until re-orientation completes
+            moveBounds();
+        }
 
 	}
+
+    public void moveBounds()
+    {
+        // Move boundaries based on screen size
+        rightBound.transform.position = new Vector3 ((Screen.width + 100)/2+2, 0.0f, 0.0f);
+        leftBound.transform.position = new Vector3 (-(Screen.width + 100)/2-2, 0.0f, 0.0f);
+        topBound.transform.position = new Vector3 (0.0f, (Screen.height + 100)/2 + 200, 0.0f);
+        lowerBound.transform.position = new Vector3 (0.0f, -(Screen.height + 100)/2-2, 0.0f);
+
+        // Adjust camera size based on screen size
+        Camera.main.orthographicSize = 0.5f * Screen.height;
+
+        // Get initial phone orientation
+        pastOrientation = Input.deviceOrientation;
+        Time.timeScale = timeTracker.timeScale; // Set the timescale back to what it was before phone rotation
+    }
 }

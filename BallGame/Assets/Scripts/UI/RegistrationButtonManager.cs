@@ -15,10 +15,14 @@ public class RegistrationButtonManager : MonoBehaviour {
     private string password = string.Empty;
     private string email = string.Empty;
     private string lastEmail = string.Empty;
+    private InputField[] registrationData;
 
 	// Use this for initialization
 	void Start () {
-	   displayError = GameObject.Find("txtLoginMessage").GetComponent<Text>();
+        registrationData = GameObject.Find("RegistrationPanel").GetComponentsInChildren<InputField>();
+        registrationData[0].text = RegisterButtonManager.username;
+
+        displayError = GameObject.Find("txtLoginMessage").GetComponent<Text>();
 	}
 	
 	// Update is called once per frame
@@ -36,8 +40,6 @@ public class RegistrationButtonManager : MonoBehaviour {
 
     public void SendRegistration()
     {
-        
-        InputField[] registrationData = GameObject.Find("RegistrationPanel").GetComponentsInChildren<InputField>();
         errorText = "Registering...";
 
         username = registrationData[0].text;

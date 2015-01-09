@@ -329,7 +329,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11461696, guid: 625917516136aa24e899e16c7afcc887, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 625917516136aa24e899e16c7afcc887, type: 2}
   m_RootGameObject: {fileID: 522288471}
   m_IsPrefabParent: 0
@@ -342,7 +343,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 522288473}
-  - 114: {fileID: 522288472}
   - 114: {fileID: 522288474}
   m_Layer: 0
   m_Name: PlayButtonManager
@@ -351,18 +351,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &522288472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11461696, guid: 625917516136aa24e899e16c7afcc887,
-    type: 2}
-  m_PrefabInternal: {fileID: 477025293}
-  m_GameObject: {fileID: 522288471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &522288473
 Transform:
   m_ObjectHideFlags: 0
@@ -630,7 +618,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11495708, guid: 79e78b3467cd77845b67cb18be332617, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 79e78b3467cd77845b67cb18be332617, type: 2}
   m_RootGameObject: {fileID: 1963269122}
   m_IsPrefabParent: 0
@@ -1583,7 +1572,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1963269124}
-  - 114: {fileID: 1963269123}
   - 114: {fileID: 1963269125}
   m_Layer: 0
   m_Name: SoundToggleManager
@@ -1592,18 +1580,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1963269123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11495708, guid: 79e78b3467cd77845b67cb18be332617,
-    type: 2}
-  m_PrefabInternal: {fileID: 763046932}
-  m_GameObject: {fileID: 1963269122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1963269124
 Transform:
   m_ObjectHideFlags: 0
