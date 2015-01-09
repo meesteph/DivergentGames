@@ -8,15 +8,13 @@ public class playerDie : MonoBehaviour {
     public GameObject player;
 
     void OnTriggerEnter (Collider playerSphereCollider){
-
         Destroy(playerSphereCollider);
+        time = timeTracker.timer;
         PauseGame();
-		time = timeTracker.timer;
-		SubmitHighscores();
-        timeTracker.timer = 0.0f;
+        SubmitHighscores();
     }
     
-    public void PauseGame()
+    public static void PauseGame()
     {
         // Pause game
         Time.timeScale = 0;
@@ -24,6 +22,8 @@ public class playerDie : MonoBehaviour {
         
         // Instantiate menu scene
         Application.LoadLevel ("SettingsScene");
+
+        timeTracker.timer = 0.0f;
 
     }
     
