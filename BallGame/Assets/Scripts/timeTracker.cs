@@ -7,6 +7,8 @@ public class timeTracker : MonoBehaviour {
 
 	public static float timer = 0.0f;
 	public static float timeScale = 1;
+	public GameObject player;
+	private int extraSpawn = 1;
 
 	void Start(){
 
@@ -15,6 +17,8 @@ public class timeTracker : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+		// Increment timer and display
 		if (!playerDie.gamePaused) 
 		{
 			Text gameTime = GetComponent<Text> ();
@@ -23,6 +27,11 @@ public class timeTracker : MonoBehaviour {
 			gameTime.text = "Timer: " + timer.ToString ();
 		}
 
-
+		// Spawn extra one extra every x interval of time
+		if(timer >= 30 * extraSpawn)
+		{
+			extraSpawn += 1;
+			Instantiate(player,new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
+		}
 	}	
 }

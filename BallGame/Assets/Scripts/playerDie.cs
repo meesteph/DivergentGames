@@ -5,7 +5,7 @@ public class playerDie : MonoBehaviour {
 
     public static bool gamePaused = false;
 	private float time;
-    public GameObject player;
+    //public GameObject player;
 
     void OnTriggerEnter (Collider playerSphereCollider){
         Destroy(playerSphereCollider);

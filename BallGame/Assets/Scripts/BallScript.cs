@@ -4,6 +4,14 @@ using System.Collections;
 public class BallScript : MonoBehaviour {
 
 	public float TapForceCoefficient;
+    private float ballScale;
+    private Vector3 currentPos;
+
+    void Start()
+    {
+        ballScale = Screen.height/8.0f;
+        gameObject.transform.localScale = new Vector3(ballScale, ballScale, ballScale);
+    }
 
     void Update()
     {
@@ -16,6 +24,13 @@ public class BallScript : MonoBehaviour {
         } else if (transform.localPosition.y <= -Screen.height/2)
         {
             playerDie.PauseGame();
+        }
+
+        currentPos = transform.localPosition;
+        // Check if outside z-plane
+        if(currentPos.z > 1 || currentPos.z < 1)
+        {
+            gameObject.transform.localPosition =new Vector3(currentPos.x, currentPos.y, 0);
         }
     }
 

@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd20c19734444bd44b20c56426d9ccc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TapForceCoefficient: 200000
+  TapForceCoefficient: 80000
 --- !u!135 &13523052
 SphereCollider:
   m_ObjectHideFlags: 1
