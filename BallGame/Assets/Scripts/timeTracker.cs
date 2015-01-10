@@ -8,6 +8,7 @@ public class timeTracker : MonoBehaviour {
 	public static float timer = 0.0f;
 	public static float timeScale = 1;
 	public GameObject player;
+	public int extraSpawnTime;
 	private int extraSpawn = 1;
 
 	void Start(){
@@ -27,7 +28,7 @@ public class timeTracker : MonoBehaviour {
 			gameTime.text = "Timer: " + timer.ToString ();
 		}
 
-		// Spawn extra one extra every x interval of time
+		// Spawn extra one extra every extraSpawnTime seconds
 		if(timer >= 30 * extraSpawn)
 		{
 			extraSpawn += 1;

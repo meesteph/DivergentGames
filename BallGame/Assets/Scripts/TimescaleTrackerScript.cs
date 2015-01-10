@@ -14,7 +14,7 @@ public class TimescaleTrackerScript : MonoBehaviour {
 			{ 
 				Time.timeScale = 1.0f + (timeTracker.timer + 1.0f) / 100f;
 			}
-			timeScaleTracker.text = "Timescale: " + Time.timeScale.ToString();
+			//timeScaleTracker.text = "Timescale: " + Time.timeScale.ToString();
 		}
 	}
 }

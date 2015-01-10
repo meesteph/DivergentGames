@@ -1,11 +1,23 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
+using Parse;
+using System;
+using System.IO;
+using System.Threading.Tasks;
 
 public class playerDie : MonoBehaviour {
 
     public static bool gamePaused = false;
 	private float time;
-    //public GameObject player;
+    public float[] highScores = new float[]{};
+    public float[] testScores = new float[]{1,2,3};
+
+    void Start()
+    {
+        
+    }
 
     void OnTriggerEnter (Collider playerSphereCollider){
         Destroy(playerSphereCollider);

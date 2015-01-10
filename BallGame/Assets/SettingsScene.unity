@@ -295,6 +295,7 @@ GameObject:
   - 224: {fileID: 475426410}
   - 222: {fileID: 475426412}
   - 114: {fileID: 475426411}
+  - 114: {fileID: 475426413}
   m_Layer: 5
   m_Name: highscoreLabel
   m_TagString: Untagged
@@ -351,6 +352,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 475426409}
+--- !u!114 &475426413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 475426409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f32f8c22358a641bf8eeec6421c0ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &477025293
 Prefab:
   m_ObjectHideFlags: 0

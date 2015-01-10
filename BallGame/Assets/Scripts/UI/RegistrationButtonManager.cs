@@ -11,11 +11,13 @@ public class RegistrationButtonManager : MonoBehaviour {
 
     Text displayError;
     private string errorText = string.Empty;
-    private string username = string.Empty;
+    public static string username = string.Empty;
     private string password = string.Empty;
     private string email = string.Empty;
     private string lastEmail = string.Empty;
     private InputField[] registrationData;
+    public float[] highScores = new float[]{};
+    public float[] testScores = new float[]{1,2,3};
 
 	// Use this for initialization
 	void Start () {
@@ -30,6 +32,7 @@ public class RegistrationButtonManager : MonoBehaviour {
         displayError.text = errorText;
         if (ParseUser.CurrentUser != null)
         {
+
             Application.LoadLevel ("SettingsScene");
         }
         else
