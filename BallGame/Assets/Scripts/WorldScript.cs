@@ -13,9 +13,9 @@ public class WorldScript : MonoBehaviour {
 
     public static int playerLives;
     public int startLives;
-    private DeviceOrientation pastOrientation;
+    //private DeviceOrientation pastOrientation;
     private Vector3 screenBoundary;
-    public static float verticalOffset;
+    public static int verticalOffset;
 
 	void Start () {
         
@@ -43,12 +43,12 @@ public class WorldScript : MonoBehaviour {
             Application.LoadLevel ("LoginScene");
         }
 
-        // Do this if the phone's orientation has changed since last frame
-        if(pastOrientation != Input.deviceOrientation)
-        {
-            Time.timeScale = 0; // Pause timer until re-orientation completes
-            moveBounds();
-        }
+        // // Do this if the phone's orientation has changed since last frame
+        // if(pastOrientation != Input.deviceOrientation)
+        // {
+        //     Time.timeScale = 0; // Pause timer until re-orientation completes
+        //     moveBounds();
+        // }
 
 	}
 
@@ -64,7 +64,7 @@ public class WorldScript : MonoBehaviour {
         Camera.main.orthographicSize = 0.5f * Screen.height;
 
         // Get initial phone orientation
-        pastOrientation = Input.deviceOrientation;
-        Time.timeScale = timeTracker.timeScale; // Set the timescale back to what it was before phone rotation
+        //pastOrientation = Input.deviceOrientation;
+        //Time.timeScale = timeTracker.timeScale; // Set the timescale back to what it was before phone rotation
     }
 }
