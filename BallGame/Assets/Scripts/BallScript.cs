@@ -23,7 +23,7 @@ public class BallScript : MonoBehaviour {
             transform.localPosition =new Vector3(0.0f, 0.0f, 0.0f);
         } else if (transform.localPosition.y <= -Screen.height/2)
         {
-            playerDie.PauseGame();
+            playerDie.HandleDeath();
         }
 
         currentPos = transform.localPosition;

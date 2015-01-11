@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +16,6 @@ public class RegistrationButtonManager : MonoBehaviour {
     private string email = string.Empty;
     private string lastEmail = string.Empty;
     private InputField[] registrationData;
-    public float[] highScores = new float[]{};
-    public float[] testScores = new float[]{1,2,3};
 
 	// Use this for initialization
 	void Start () {
@@ -32,7 +30,6 @@ public class RegistrationButtonManager : MonoBehaviour {
         displayError.text = errorText;
         if (ParseUser.CurrentUser != null)
         {
-
             Application.LoadLevel ("SettingsScene");
         }
         else

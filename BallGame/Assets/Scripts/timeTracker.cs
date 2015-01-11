@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class timeTracker : MonoBehaviour {
 
-	public static float timer = 0.0f;
+	public static float timer;
 	public static float timeScale = 1;
 	public GameObject player;
 	public int extraSpawnTime;

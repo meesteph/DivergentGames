@@ -61,7 +61,6 @@
      <Compile Include="Assets\Scripts\UI\RegistrationButtonManager.cs" />
      <Compile Include="Assets\Scripts\UI\SoundToggleManager.cs" />
      <Compile Include="Assets\Scripts\WorldScript.cs" />
-     <Compile Include="Assets\Scripts\highscoresManager.cs" />
      <Compile Include="Assets\Scripts\playerDie.cs" />
      <Compile Include="Assets\Scripts\textScript.cs" />
      <Compile Include="Assets\Scripts\timeTracker.cs" />

@@ -223,6 +223,10 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2388830, guid: aac15abcbe10c4c27b071926fc0df3ac, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aac15abcbe10c4c27b071926fc0df3ac, type: 2}
   m_RootGameObject: {fileID: 966468121}
@@ -648,7 +652,7 @@ Renderer:
     type: 2}
   m_PrefabInternal: {fileID: 198317756}
   m_GameObject: {fileID: 966468121}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 255
@@ -706,11 +710,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8409e4a1c383f4e4e99e0b09d8d7ee8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highScores: []
-  testScores:
-  - 1
-  - 2
-  - 3
 --- !u!1001 &1032527905
 Prefab:
   m_ObjectHideFlags: 0
