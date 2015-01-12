@@ -22,7 +22,6 @@ public class WorldScript : MonoBehaviour {
         // Instantiate playerLives & verticalOffset
         playerLives = startLives;
         verticalOffset = 200;
-
         // Spawn player
         Instantiate(player,new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
 
