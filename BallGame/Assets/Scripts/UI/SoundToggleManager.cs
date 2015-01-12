@@ -12,6 +12,8 @@ public class SoundToggleManager : MonoBehaviour {
 	
     void Awake()
     {
+		updateSoundSettings ();
+
         highscoreText = GameObject.Find("SettingsPanel").GetComponentsInChildren<Text>();
 
         if(!PlayerPrefs.HasKey("highA"))
