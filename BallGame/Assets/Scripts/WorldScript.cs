@@ -61,7 +61,7 @@ public class WorldScript : MonoBehaviour {
         lowerBound.transform.position = new Vector3 (0.0f, -(Screen.height + 100)/2-2, 0.0f);
 
         // Adjust camera size based on screen size
-        Camera.main.orthographicSize = 0.5f * Screen.height;
+        Camera.main.orthographicSize = 1.0f * Screen.height;
 
         // Get initial phone orientation
         //pastOrientation = Input.deviceOrientation;
