@@ -23,7 +23,7 @@ public class WorldScript : MonoBehaviour {
         playerLives = startLives;
         verticalOffset = Screen.height*1.05f;
         // Spawn player
-        Instantiate(player,new Vector3(0.0f, 0.0f, -100.0f), Quaternion.identity);
+        Instantiate(player,new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
 
         moveBounds();
 

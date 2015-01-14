@@ -12,7 +12,27 @@ public class SoundToggleManager : MonoBehaviour {
 	
     void Awake()
     {
+		if (PlayerPrefs.HasKey ("Sound Volume") == false){
+			PlayerPrefs.SetFloat("Sound Volume", 1.0f);
+		}
+
+		soundToggle = GameObject.Find("SettingsPanel").GetComponentInChildren<Toggle>();
+
+		AudioListener.volume = PlayerPrefs.GetFloat ("Sound Volume");
+
+		if (PlayerPrefs.GetFloat ("Sound Volume") == 1.0f) {
+
+			soundToggle.isOn = true;
+
+		} else {
+		
+			soundToggle.isOn = false;
+		
+		}
+
 		updateSoundSettings ();
+
+
 
         highscoreText = GameObject.Find("SettingsPanel").GetComponentsInChildren<Text>();
 
@@ -53,12 +73,13 @@ public class SoundToggleManager : MonoBehaviour {
 	{
 		soundToggle = GameObject.Find("SettingsPanel").GetComponentInChildren<Toggle>();
 		if(soundToggle.isOn) {
-			Debug.Log ("Toggled on");
-			AudioListener.volume = 1;
+			PlayerPrefs.SetFloat("Sound Volume", 1.0f);
+			AudioListener.volume = 1.0f;
 		} else {
-			Debug.Log ("Toggled off");
-			AudioListener.volume = 0;
+			PlayerPrefs.SetFloat("Sound Volume", 0.0f);
+			AudioListener.volume = 0.0f;
 		}
+
 	}
 	
 }

@@ -28,10 +28,17 @@ public class BallScript : MonoBehaviour {
 
         currentPos = transform.localPosition;
         // Check if outside z-plane
-        if(currentPos.z > 1 || currentPos.z < 1)
+
+        /*if(currentPos.z > 1 || currentPos.z < 1)
         {
             gameObject.transform.localPosition =new Vector3(currentPos.x, currentPos.y, 0);
-        }
+        }*/
+
+		if (currentPos.z != ballScale * 1.1f) {
+			gameObject.transform.localPosition = new Vector3 (currentPos.x, currentPos.y, ballScale * 1.1f);
+
+		
+		}
     }
 
 	void OnMouseDown()
