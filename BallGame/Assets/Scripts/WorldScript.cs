@@ -15,13 +15,13 @@ public class WorldScript : MonoBehaviour {
     public int startLives;
     //private DeviceOrientation pastOrientation;
     private Vector3 screenBoundary;
-    public static int verticalOffset;
+    public static float verticalOffset;
 
 	void Start () {
         
         // Instantiate playerLives & verticalOffset
         playerLives = startLives;
-        verticalOffset = 200;
+        verticalOffset = Screen.height*1.05f;
         // Spawn player
         Instantiate(player,new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
 
