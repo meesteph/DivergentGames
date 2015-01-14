@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using Parse;
 
 public class SoundToggleManager : MonoBehaviour {
 	
@@ -33,16 +34,17 @@ public class SoundToggleManager : MonoBehaviour {
 		updateSoundSettings ();
 
 
-
         highscoreText = GameObject.Find("SettingsPanel").GetComponentsInChildren<Text>();
+
+		string playerName = ParseUser.CurrentUser.Username;
 
         if(!PlayerPrefs.HasKey("highA"))
         {
             Debug.Log("New player");
-            PlayerPrefs.SetFloat("highA", 0.0f);
-            PlayerPrefs.SetFloat("highB", 0.0f);
-            PlayerPrefs.SetFloat("highC", 0.0f);
-            PlayerPrefs.SetFloat("timer", 0.0f);
+            PlayerPrefs.SetFloat("highA" + playerName, 0.0f);
+            PlayerPrefs.SetFloat("highB" + playerName, 0.0f);
+			PlayerPrefs.SetFloat("highC" + playerName, 0.0f);
+			PlayerPrefs.SetFloat("timer", 0.0f);
         }
 
         if(PlayerPrefs.GetFloat("timer") > 0)
@@ -50,21 +52,21 @@ public class SoundToggleManager : MonoBehaviour {
             Debug.Log(PlayerPrefs.GetFloat("timer"));
         }
 
-        highScores.Add(PlayerPrefs.GetFloat("highA"));
-        highScores.Add(PlayerPrefs.GetFloat("highB"));
-        highScores.Add(PlayerPrefs.GetFloat("highC"));
+		highScores.Add(PlayerPrefs.GetFloat("highA" + playerName));
+		highScores.Add(PlayerPrefs.GetFloat("highB" + playerName));
+		highScores.Add(PlayerPrefs.GetFloat("highC" + playerName));
         highScores.Add(PlayerPrefs.GetFloat("timer"));
         highScores.Sort();
 
-        PlayerPrefs.SetFloat("highA", highScores[highScores.Count-1]);
-        PlayerPrefs.SetFloat("highB", highScores[highScores.Count-2]);
-        PlayerPrefs.SetFloat("highC", highScores[highScores.Count-3]);
+		PlayerPrefs.SetFloat("highA" + playerName, highScores[highScores.Count-1]);
+		PlayerPrefs.SetFloat("highB" + playerName, highScores[highScores.Count-2]);
+		PlayerPrefs.SetFloat("highC" + playerName, highScores[highScores.Count-3]);
 
         highScores = new List<float>{};
 
-        SoundToggleManager.highscoreText[5].text = "First: " + PlayerPrefs.GetFloat("highA") + " seconds";
-        SoundToggleManager.highscoreText[6].text = "Second: " + PlayerPrefs.GetFloat("highB") + " seconds";
-        SoundToggleManager.highscoreText[7].text = "Third: " + PlayerPrefs.GetFloat("highC") + " seconds";
+		SoundToggleManager.highscoreText[5].text = "First: " + PlayerPrefs.GetFloat("highA" + playerName) + " seconds";
+		SoundToggleManager.highscoreText[6].text = "Second: " + PlayerPrefs.GetFloat("highB" + playerName) + " seconds";
+		SoundToggleManager.highscoreText[7].text = "Third: " + PlayerPrefs.GetFloat("highC" + playerName) + " seconds";
 
         timeTracker.timer = 0.0f;
         PlayerPrefs.SetFloat("timer", 0.0f);
