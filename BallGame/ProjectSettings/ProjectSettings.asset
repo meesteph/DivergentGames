@@ -10,8 +10,8 @@ PlayerSettings:
   targetGlesGraphics: 1
   targetResolution: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: BallGame
+  companyName: Succession Studios
+  productName: Joogle
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   defaultScreenWidth: 1024
@@ -71,8 +71,8 @@ PlayerSettings:
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   productGUID: 4fad5042b45b04524b13894da0e801ea
-  iPhoneBundleVersion: 1.0
-  AndroidBundleVersionCode: 1
+  iPhoneBundleVersion: 1.1
+  AndroidBundleVersionCode: 2
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
   aotOptions: 
@@ -109,7 +109,7 @@ PlayerSettings:
   m_BuildTargetIcons:
   - m_BuildTarget: 
     m_Icons:
-    - m_Icon: {fileID: 0}
+    - m_Icon: {fileID: 2800000, guid: aa5f8d2a684485a41b3a7034d3de2e64, type: 3}
       m_Size: 128
   - m_BuildTarget: Android
     m_Icons:
