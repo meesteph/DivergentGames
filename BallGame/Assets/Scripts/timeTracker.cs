@@ -29,7 +29,7 @@ public class timeTracker : MonoBehaviour {
 		}
 
 		// Spawn extra one extra every extraSpawnTime seconds
-		if(timer >= 30 * extraSpawn)
+		if(timer >= extraSpawnTime * extraSpawn && extraSpawn < 5)
 		{
 			extraSpawn += 1;
 			Instantiate(player,new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
