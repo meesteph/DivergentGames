@@ -23,7 +23,7 @@ public class WorldScript : MonoBehaviour {
         playerLives = startLives;
         verticalOffset = Screen.height*1.05f;
         // Spawn player
-        Instantiate(player,new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
+        Instantiate(player,new Vector3(0.0f, 0.0f, -100.0f), Quaternion.identity);
 
         moveBounds();
 
@@ -54,10 +54,18 @@ public class WorldScript : MonoBehaviour {
     public void moveBounds()
     {
         // Move boundaries based on screen size
-        rightBound.transform.position = new Vector3 ((Screen.width + 100)/2+2, 0.0f, 0.0f);
-        leftBound.transform.position = new Vector3 (-(Screen.width + 100)/2-2, 0.0f, 0.0f);
-        topBound.transform.position = new Vector3 (0.0f, (Screen.height + 100)/2 + verticalOffset, 0.0f);
-        lowerBound.transform.position = new Vector3 (0.0f, -(Screen.height + 100)/2-2, 0.0f);
+		rightBound.transform.position = new Vector3 ((Screen.width + 100)/2+2, 0.0f, 0.0f);
+		rightBound.transform.localScale = new Vector3 (100.0f,100000.0f,100000.0f);
+		
+		leftBound.transform.position = new Vector3 (-(Screen.width + 100)/2-2, 0.0f, 0.0f);
+		leftBound.transform.localScale = new Vector3 (100.0f,100000.0f,100000.0f);
+		
+		topBound.transform.position = new Vector3 (0.0f, (Screen.height + 100)/2 + verticalOffset, 0.0f);
+		topBound.transform.localScale = new Vector3 (100000.0f,100.0f,100000.0f);
+		
+		lowerBound.transform.position = new Vector3 (0.0f, -(Screen.height + 100)/2-2, 0.0f);
+		lowerBound.transform.localScale = new Vector3 (100000.0f, 5.0f, 100000.0f);
+
 
         // Adjust camera size based on screen size
         Camera.main.orthographicSize = 0.5f * Screen.height;
