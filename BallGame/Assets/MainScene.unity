@@ -1442,4 +1442,5 @@ MonoBehaviour:
   rightBound: {fileID: 777260164}
   leftBound: {fileID: 585606927}
   lowerBound: {fileID: 966468121}
+  powerUp: {fileID: 115268, guid: d64a4e8e2afa24084955b3951255bf55, type: 2}
   startLives: 5

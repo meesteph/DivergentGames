@@ -20,7 +20,7 @@ public class BallScript : MonoBehaviour {
            transform.localPosition.x <= -Screen.width/2 ||
            transform.localPosition.y >= (Screen.height/2 + WorldScript.verticalOffset))
         {
-            transform.localPosition =new Vector3(0.0f, 0.0f, 0.0f);
+            transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
         } else if (transform.localPosition.y <= -Screen.height/2)
         {
             playerDie.HandleDeath();
