@@ -20,7 +20,7 @@ public class PowerUpScript : MonoBehaviour {
 
 			audio.Play ();
 			renderer.enabled = false;
-			collider.isTrigger = false;
+			collider.enabled = false;
 
 			Time.timeScale = 0.75f * Time.timeScale;
 
