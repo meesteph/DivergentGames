@@ -42,8 +42,7 @@ public class WorldScript : MonoBehaviour {
 			Instantiate (powerUp, spawnPosition, Quaternion.identity);
 			powerUp.transform.localScale = new Vector3 (powerUpScale, powerUpScale, powerUpScale);
 
-
-			yield return new WaitForSeconds (45.0f);
+			yield return new WaitForSeconds (5.0f);
 		}
 	}
 
