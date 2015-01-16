@@ -10,7 +10,7 @@ public class TimescaleTrackerScript : MonoBehaviour {
 
 		if (!playerDie.gamePaused)
 		{
-			Time.timeScale = 1.0f + (timeTracker.timer + 1.0f) / 100f;
+			Time.timeScale += (Time.deltaTime / Time.timeScale) * 0.01f;
 			timeScaleTracker.text = "Timescale: " + Time.timeScale.ToString();
 		}
 	}

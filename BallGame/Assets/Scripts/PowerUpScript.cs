@@ -22,14 +22,13 @@ public class PowerUpScript : MonoBehaviour {
 			renderer.enabled = false;
 			collider.isTrigger = false;
 
-			Time.timeScale = 0;
-			// Debug.Log (Time.timeScale);
+			Time.timeScale = 0.75f * Time.timeScale;
 
-			StartCoroutine(Wait ());
+			StartCoroutine(WaitAndDestroy ());
 		}
 	}
 
-	IEnumerator Wait(){
+	IEnumerator WaitAndDestroy(){
 		yield return new WaitForSeconds(2.0f);
 		Destroy (gameObject);
 		Debug.Log("Destroyed");

@@ -12,8 +12,10 @@ public class playerDie : MonoBehaviour {
     public static bool gamePaused = false;
 
     void OnTriggerEnter (Collider playerSphereCollider){
-        Destroy(playerSphereCollider);
-        HandleDeath();
+		if (playerSphereCollider.tag == "Player"){
+        	Destroy(playerSphereCollider);
+        	HandleDeath();
+		}
     }
     
     public static void HandleDeath()

@@ -33,16 +33,15 @@ public class WorldScript : MonoBehaviour {
 	}
 
 	IEnumerator SpawnPowerUps () {
-		// yield return new WaitForSeconds (0.0f);
+		yield return new WaitForSeconds (15.0f);
 		while (true) {
 			Debug.Log ("Power up spawned");
-			// Vector3 spawnPosition = new Vector3(Random.Range(-Screen.width/2.0f,Screen.width/2.0f), Screen.height/2.0f+50, 85.1125f);
-			Vector3 spawnPosition = new Vector3(0.0f, Screen.height/2.0f + 50, 85.1125f);
-			float powerUpScale = Screen.height / 12.0f;
+			Vector3 spawnPosition = new Vector3(Random.Range(-Screen.width/2.0f + 25.0f,Screen.width/2.0f - 25.0f), Screen.height/2.0f+50, 85.1125f);
+			float powerUpScale = Screen.height / 16.0f;
 			Instantiate (powerUp, spawnPosition, Quaternion.identity);
 			powerUp.transform.localScale = new Vector3 (powerUpScale, powerUpScale, powerUpScale);
 
-			yield return new WaitForSeconds (5.0f);
+			yield return new WaitForSeconds (45.0f);
 		}
 	}
 
